@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sometype+Mono&family=Tektur&display=swap");
+
+:root {
+  --green-1: #00785c;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.green-button {
+  max-height: 45px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  border: none;
+  background-color: var(--green-1);
+  cursor: pointer;
+}
+
+/* Start Game Modal */
+.start-game {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.start-game.closed {
+  display: none;
+}
+.start-game .modal {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.start-game .modal input {
+  padding: 10px;
+}
+
+/* Board */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  border: 5px solid var(--green-1);
+}
+.game-cell {
+  width: 150px;
+  height: 150px;
+  border: 5px solid var(--green-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sometype Mono", monospace;
+  font-size: 3em;
+  color: var(--green-1);
+  cursor: pointer;
+}
+
+/*Prompt*/
+.prompt-restart {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.player-prompt {
+  font-size: 2.5em;
+  color: var(--green-1);
+}
